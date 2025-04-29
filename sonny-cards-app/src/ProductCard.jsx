@@ -23,6 +23,15 @@ export default function ProductCard(props) {
                     </p>
                 </div>
 
+                <div className="bg-white rounded-md text-xs border-1 border-red-500">
+                <button className="flex bg-transparent items-center">
+                    <span className="material-symbols-outlined">
+                        add_shopping_cart
+                    </span>
+                        Add to Cart
+                </button>
+                </div>
+
             </div>
            
         </>
