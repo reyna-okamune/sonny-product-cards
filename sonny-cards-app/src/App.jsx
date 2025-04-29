@@ -5,8 +5,10 @@ function App() {
 
   return (
     <>
-      <h1 className="font-poppins text-red-500">Sonny Angels</h1>
-      < ProductList />
+      <div className='flex flex-col items-center'>
+        <h1 className="font-poppins text-red-500 pb-10">Sonny Angels</h1>
+        < ProductList />
+      </div>
     </>
   )
 }
