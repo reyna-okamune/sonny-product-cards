@@ -50,11 +50,15 @@ function App() {
           />
         </div>
 
-        <div className="flex h-1/2">
+        <div className="flex flex-col h-1/2">
           < Cart 
             items={cartItems}
             onRemoveFromCart={handleRemoveFromCart}
           />
+
+          <button className='mt-10 bg-rose-400 text-white text-lg font-bold w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-500 hover:border-rose-500 focus:border-rose-500 focus:outline-none transition'>
+            Confirm Order
+          </button>
         </div>
 
       </div>

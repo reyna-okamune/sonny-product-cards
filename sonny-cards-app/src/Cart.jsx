@@ -81,8 +81,11 @@ export default function Cart({items, onRemoveFromCart}) {
                         <h2 className="font-light text-sm sm:text-base">Order Total</h2>
                         <h2 className="font-bold text-xl sm:text-2xl">${formattedTotal}</h2>
                     </div>
+
                 )}
             </div>
+
+
         </>
     )
 }
