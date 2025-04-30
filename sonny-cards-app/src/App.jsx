@@ -1,5 +1,6 @@
 import './App.css'
 import ProductList from './ProductList'
+import Cart from './Cart.jsx'
 function App() {
 
   return (
@@ -11,7 +12,7 @@ function App() {
         </div>
 
         <div className="">
-          <p>shopping cart</p>
+          < Cart />
         </div>
       </div>
     </>
