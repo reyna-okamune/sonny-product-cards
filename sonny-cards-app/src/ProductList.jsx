@@ -10,18 +10,20 @@ export default function ProductList() {
 
     return(
         <>
-            <div className=' grid grid-cols-3 gap-5 w-full'>
-                {products.map((item) => {
-                    return (
-                        <ProductCard
-                        key={item.id}
-                        name={item.name}
-                        category={item.category}
-                        price={item.price}
-                        image={item.image}
-                        />
-                    );
-                })}
+            <div className="w-full flex justify-center border-1 border-red-500">
+                <div className='grid grid-cols-1 sm:grid-cols-3 sm:gap-3 w-full justify-items-center'>
+                    {products.map((item) => {
+                        return (
+                            <ProductCard
+                            key={item.id}
+                            name={item.name}
+                            category={item.category}
+                            price={item.price}
+                            image={item.image}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </>
     )

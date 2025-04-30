@@ -2,7 +2,7 @@
 export default function ProductCard(props) {
     return (
         <>
-            <div className="border-red-500 border-1 flex flex-col items-center content-center p-2 sm:w-[40vw] md:w-[20vw] lg:w-[18vw] max-w-[220px]">
+            <div className="flex flex-col items-center content-center p-2 w-full max-w-64 ">
                 
                 <img 
                     src={props.image} 
@@ -15,7 +15,7 @@ export default function ProductCard(props) {
                     <p className="text-stone-500 text-xs">
                         {props.category}
                     </p>
-                    <h3 className="text-stone-800 text-xl font-bold">
+                    <h3 className="text-stone-800 lg:text-xl md:text-lg font-bold">
                         {props.name}
                     </h3>
                     <p className="text-rose-600 text-xs font-semibold">
