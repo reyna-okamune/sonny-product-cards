@@ -1,12 +1,9 @@
 import products from './data.js'
 import ProductCard from './ProductCard';
 
-export default function ProductList() {
+export default function ProductList({onAddToCart}) {
 
-    /* DEBUGGING */
-    products.forEach((item) => {
-        console.log(`${item.name}`)
-    })
+    
 
     return(
         <>
@@ -15,11 +12,12 @@ export default function ProductList() {
                     {products.map((item) => {
                         return (
                             <ProductCard
-                            key={item.id}
-                            name={item.name}
-                            category={item.category}
-                            price={item.price}
-                            image={item.image}
+                                key={item.id}
+                                name={item.name}
+                                category={item.category}
+                                price={item.price}
+                                image={item.image}
+                                onAddToCart={() => onAddToCart(item)}
                             />
                         );
                     })}
