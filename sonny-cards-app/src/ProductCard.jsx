@@ -25,7 +25,7 @@ export default function ProductCard(props) {
 
                 <div className="pt-3">
                     <button 
-                        className="w-full flex items-center justify-center text-sm font-semibold gap-1 bg-white py-3 px-4 rounded-full border-2 border-rose-300 hover:border-rose-500 transition"
+                        className="w-full flex items-center justify-center text-sm font-semibold gap-1 bg-white py-3 px-4 rounded-full border-2 border-rose-500 hover:border-rose-500 hover:bg-rose-500 hover:text-white focus:bg-rose-500 focus:outline-rose-500 focus:text-white transition"
                         onClick={props.onAddToCart}
                     >
                         <span className="material-symbols-outlined text-sm">

@@ -50,8 +50,9 @@ export default function Cart({items, onRemoveFromCart}) {
 
                                     <button
                                         onClick={() => onRemoveFromCart(product)}
+                                        className="hover:border-none hover:outline-none focus:border-none focus:outline-none"
                                     >
-                                        <span className="material-symbols-outlined cursor-pointer text-stone-800 text-base sm:text-lg hover:text-rose-600 hover:border-1 hover:border-white">
+                                        <span className="material-symbols-outlined cursor-pointer text-stone-800 text-base sm:text-lg hover:text-rose-600">
                                                 cancel
                                         </span>
                                     </button>
