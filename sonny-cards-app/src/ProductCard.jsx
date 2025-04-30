@@ -2,7 +2,7 @@
 export default function ProductCard(props) {
     return (
         <>
-            <div className="flex flex-col items-center content-center p-2 mb-10 w-full max-w-48 ">
+            <div className="flex flex-col items-center content-center p-2 mb-10 w-full max-w-xs">
 
                 <img 
                     src={props.image} 
@@ -25,7 +25,7 @@ export default function ProductCard(props) {
 
                 <div className="pt-3">
                     <button 
-                        className="w-full flex text-sm font-semibold gap-2 bg-white py-3 px-8 rounded-full border-2 border-rose-300 hover:border-rose-500"
+                        className="w-full flex items-center justify-center text-sm font-semibold gap-1 bg-white py-3 px-4 rounded-full border-2 border-rose-300 hover:border-rose-500 transition"
                         onClick={props.onAddToCart}
                     >
                         <span className="material-symbols-outlined text-sm">

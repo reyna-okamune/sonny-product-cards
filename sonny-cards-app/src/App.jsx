@@ -42,15 +42,15 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:gap-10 w-full">
-        <div className='flex flex-col md:flex-2 items-center'>
+      <div className="flex flex-col md:flex-row md:gap-14 w-full pt-10">
+        <div className='flex flex-col s'>
           <h2 className="font-poppins text-3xl text-stone-800 font-bold pb-5 text-center sm:text-left">Sonny Angels</h2>
           < ProductList 
               onAddToCart={handleAddToCart}
           />
         </div>
 
-        <div className="flex md:flex-2">
+        <div className="flex h-1/2">
           < Cart 
             items={cartItems}
             onRemoveFromCart={handleRemoveFromCart}

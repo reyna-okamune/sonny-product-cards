@@ -27,7 +27,7 @@ export default function Cart({items, onRemoveFromCart}) {
     
     return (
         <>
-            <div className="bg-white rounded-md flex items-left w-full max-w-md mx-auto p-10 flex flex-col">
+            <div className="bg-white rounded-md flex flex-col w-full min-w-[20rem] max-w-md min-h-[300px] mx-auto p-10">
                 <h2 className="font-bold text-2xl pb-4 text-rose-600 text-center sm:text-left">Your Cart ({items.length})</h2>
 
 
@@ -35,7 +35,7 @@ export default function Cart({items, onRemoveFromCart}) {
                     <ul>
                     {uniqueItems.map((product, index) => {
                         return (
-                            <li key={index} className="flex flex-col px-2 py-2 mb-2 border-b border-b-1 border-rose-200">
+                            <li key={index} className="flex flex-col items-left px-2 py-2 mb-2 border-b border-b-1 border-rose-200">
 
                                 <div className="flex flex-row items-center justify-between">
                                     <div>
@@ -78,7 +78,7 @@ export default function Cart({items, onRemoveFromCart}) {
                 {uniqueItems.length > 0 && (
                     <div className="flex flex-row justify-between items-center text-stone-800 pt-6">
                         <h2 className="font-light text-sm sm:text-base">Order Total</h2>
-                        <h2 className="font-bold text-xl sm:text-2xl">{formattedTotal}</h2>
+                        <h2 className="font-bold text-xl sm:text-2xl">${formattedTotal}</h2>
                     </div>
                 )}
             </div>
