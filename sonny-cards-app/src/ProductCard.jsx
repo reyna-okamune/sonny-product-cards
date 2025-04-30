@@ -2,7 +2,7 @@
 export default function ProductCard(props) {
     return (
         <>
-            <div className="flex flex-col items-center content-center p-2 mb-10 w-full max-w-64 ">
+            <div className="flex flex-col items-center content-center p-2 mb-10 w-full max-w-48 ">
 
                 <img 
                     src={props.image} 
