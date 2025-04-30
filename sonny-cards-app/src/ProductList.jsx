@@ -10,7 +10,7 @@ export default function ProductList() {
 
     return(
         <>
-            <div className="w-full flex justify-center border-1 border-red-500">
+            <div className="w-full flex justify-center">
                 <div className='grid grid-cols-1 sm:grid-cols-3 sm:gap-3 w-full justify-items-center'>
                     {products.map((item) => {
                         return (
