@@ -1,10 +1,12 @@
 import './App.css'
 import ProductList from './ProductList'
 import Cart from './Cart.jsx'
+import ConfirmationModal from './ConfirmationModal.jsx'
 import {useState} from 'react'
 function App() {
 
   const [cartItems, setCartItems] = useState([])
+  const [openedModal, setOpenModal] = useState(false)
 
   const handleAddToCart = (product) => {
     setCartItems(prev => [...prev, product])
@@ -40,9 +42,19 @@ function App() {
     }
   })
 
+  const handleConfirmationClick = (() => {
+    console.log("confirmation button clicked!");
+    setOpenModal(true);
+  })
+
+  const handleModalExit = (() => {
+    setOpenModal(false);
+  })
+
+
   return (
     <>
-      <div className="flex flex-col md:flex-row md:gap-14 w-full pt-10">
+      <div className="flex flex-col lg:flex-row md:gap-14 w-full pt-10">
         <div className='flex flex-col s'>
           <h2 className="font-poppins text-3xl text-stone-800 font-bold pb-5 text-center sm:text-left">Sonny Angels</h2>
           < ProductList 
@@ -56,12 +68,23 @@ function App() {
             onRemoveFromCart={handleRemoveFromCart}
           />
 
-          <button className='mt-10 bg-rose-400 text-white text-lg font-bold w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-500 hover:border-rose-500 focus:border-rose-500 focus:outline-none transition'>
+          <button 
+            className='mt-10 bg-rose-400 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-500 hover:border-rose-500 focus:border-rose-500 focus:outline-none transition'
+            onClick={handleConfirmationClick}
+          >
             Confirm Order
           </button>
         </div>
 
       </div>
+
+      {openedModal && (
+        <div>
+          < ConfirmationModal 
+            onExit={handleModalExit}
+          />
+        </div>
+      )}
     </>
   )
 }
