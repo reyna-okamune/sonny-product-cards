@@ -2,7 +2,9 @@ import './App.css'
 import ProductList from './ProductList'
 import Cart from './Cart.jsx'
 import ConfirmationModal from './ConfirmationModal.jsx'
-import {useState} from 'react'
+import {useState, useRef} from 'react'
+import { motion } from "motion/react"
+
 function App() {
 
   const [cartItems, setCartItems] = useState([])
@@ -56,7 +58,11 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row md:gap-14 w-full pt-10">
+    <div>
+
+      <motion.div 
+        className="flex flex-col lg:flex-row md:gap-14 w-full pt-10"
+      >
         <div className='flex flex-col s'>
           <h2 className="font-poppins text-3xl text-stone-800 font-bold pb-5 text-center sm:text-left">Sonny Angels</h2>
           < ProductList 
@@ -70,22 +76,23 @@ function App() {
             onRemoveFromCart={handleRemoveFromCart}
           />
 
-          <button 
+          <motion.button 
             disabled={cartItems.length === 0}
-            className={`mt-10 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full transition 
+            className={`mt-10 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full
               ${cartItems.length === 0 
-                ? 'bg-gray-400 cursor-not-allowed' 
+                ? 'bg-gray-400  focus:border-gray-400 hover:border-gray-400 cursor-not-allowed' 
                 : 'bg-rose-500 hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600'}
             `}
             onClick={handleConfirmationClick}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onHoverStart={() => console.log('hover started!')}
           >
             Confirm Order
-          </button>
+          </motion.button>
         </div>
 
-      </div>
-
-      {openedModal && (
+        {openedModal && (
         <div>
           < ConfirmationModal
             items={cartItems} 
@@ -93,6 +100,10 @@ function App() {
           />
         </div>
       )}
+
+      </motion.div>
+
+    </div>
     </>
   )
 }

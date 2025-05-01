@@ -1,3 +1,5 @@
+import { motion } from 'motion/react'
+
 export default function ConfirmationModal({items, onExit}) {
     console.log(`pop up modal opened!`)
 
@@ -73,12 +75,15 @@ export default function ConfirmationModal({items, onExit}) {
                                 </div>
 
 
-                                <button 
-                                    className={`mt-2 mb-6 bg-rose-500 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none transition`}
+                                <motion.button 
+                                    className={`flex mt-8 mb-2 bg-rose-500 text-white justify-center text-lg font-bold w-1/2 sm:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none`}
                                     onClick={onExit}
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    onHoverStart={() => console.log('hover started!')}
                                 >
                                     Start New Order
-                                </button>
+                                </motion.button>
 
                                     
                             
