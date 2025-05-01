@@ -72,18 +72,20 @@ export default function ConfirmationModal({items, onExit}) {
                                     <h2 className="font-bold text-xl sm:text-2xl">${formattedTotal}</h2>
                                 </div>
 
+
+                                <button 
+                                    className={`mt-2 mb-6 bg-rose-500 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none transition`}
+                                    onClick={onExit}
+                                >
+                                    Start New Order
+                                </button>
+
                                     
                             
                             </div>
                         )
                     }
 
-                    <button 
-                        className={`mt-2 mb-6 bg-rose-500 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none transition`}
-                        onClick={onExit}
-                    >
-                        New Order
-                    </button>
                 </div>
 
 

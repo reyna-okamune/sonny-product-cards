@@ -71,7 +71,12 @@ function App() {
           />
 
           <button 
-            className={`mt-10 bg-rose-500 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none transition ${cartItems.length > 0 ? 'cursor_allowed' : 'cursor_not_allowed'}`}
+            disabled={cartItems.length === 0}
+            className={`mt-10 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full transition 
+              ${cartItems.length === 0 
+                ? 'bg-gray-400 cursor-not-allowed' 
+                : 'bg-rose-500 hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600'}
+            `}
             onClick={handleConfirmationClick}
           >
             Confirm Order
