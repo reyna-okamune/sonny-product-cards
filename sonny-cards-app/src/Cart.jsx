@@ -1,5 +1,3 @@
-import products from "./data";
-
 export default function Cart({items, onRemoveFromCart}) {
     
 
@@ -27,7 +25,7 @@ export default function Cart({items, onRemoveFromCart}) {
     
     return (
         <>
-            <div className="bg-white rounded-md flex flex-col w-full min-w-[20rem] max-w-md min-h-[300px] mx-auto p-10">
+            <div className="bg-white rounded-md flex flex-col w-full min-w-[20rem] max-w-md min-h-[200px] mx-auto p-10">
                 <h2 className="font-bold text-2xl pb-4 text-rose-600 text-center sm:text-left">Your Cart ({items.length})</h2>
 
 
@@ -66,7 +64,7 @@ export default function Cart({items, onRemoveFromCart}) {
                     :
                     (
                         <div className="">
-                            <p className="font-normal text-base text-left text-stone-800 py-2 mb-2 border-b border-b-1 border-rose-200">Empty Cart</p>
+                            <p className="font-normal text-xl text-left text-stone-800 py-2 mb-2">Cart is Empty!</p>
 
                             <div className="flex flex-row justify-between items-center text-stone-800 pt-6">
                                 <h2 className="font-light text-sm sm:text-base">Order Total</h2>

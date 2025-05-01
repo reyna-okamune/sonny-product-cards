@@ -10,6 +10,9 @@ export default {
             sans: ['Poppins', 'sans-serif'],
             poppins: ['Poppins', 'sans-serif'],
         },
+        colors: {
+          'my-pink': '#fff2f7',
+        }
       },
     },
     plugins: [],

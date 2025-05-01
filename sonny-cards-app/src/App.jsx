@@ -47,8 +47,10 @@ function App() {
     setOpenModal(true);
   })
 
+  {/* exit modal and reset cart*/}
   const handleModalExit = (() => {
     setOpenModal(false);
+    setCartItems([]);
   })
 
 
@@ -69,7 +71,7 @@ function App() {
           />
 
           <button 
-            className='mt-10 bg-rose-400 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-500 hover:border-rose-500 focus:border-rose-500 focus:outline-none transition'
+            className={`mt-10 bg-rose-500 text-white text-lg font-bold sm:w-1/2 lg:w-3/5 mx-auto py-2 px-5 rounded-full hover:bg-rose-600 hover:border-rose-600 focus:border-rose-600 focus:outline-none transition ${cartItems.length > 0 ? 'cursor_allowed' : 'cursor_not_allowed'}`}
             onClick={handleConfirmationClick}
           >
             Confirm Order
@@ -80,7 +82,8 @@ function App() {
 
       {openedModal && (
         <div>
-          < ConfirmationModal 
+          < ConfirmationModal
+            items={cartItems} 
             onExit={handleModalExit}
           />
         </div>
